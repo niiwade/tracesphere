@@ -4,8 +4,8 @@ import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Intelligent Document Analysis",
+        description: "Extract key information automatically from any document. Our AI identifies crucial elements without tedious manual review.",
         bullets: [
             {
                 title: "Entity Recognition",

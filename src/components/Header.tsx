@@ -19,13 +19,13 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
+        <header className="bg-black fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
             <Container className="!px-0">
-                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
+                <nav className="shadow-md md:shadow-none bg-black mx-auto flex justify-between items-center py-2 px-5 md:py-10">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <TbCube3dSphere  className="text-foreground min-w-fit w-7 h-7" />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
+                        <TbCube3dSphere className="text-white min-w-fit w-7 h-7" />
+                        <span className="manrope text-xl font-semibold text-white cursor-pointer">
                             {siteDetails.siteName}
                         </span>
                     </Link>
@@ -34,14 +34,19 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                <Link href={item.url} className="text-white hover:text-gray-300 transition-colors">
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
-                        <li>
+                        <li >
                             <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
                                Login
+                            </Link>
+                        </li>
+                        <li >
+                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
+                               Sign Up
                             </Link>
                         </li>
                     </ul>
@@ -76,11 +81,11 @@ const Header: React.FC = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
             >
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
+                <div id="mobile-menu" className="md:hidden bg-black shadow-lg">
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
+                                <Link href={item.url} className="text-white hover:text-primary block" onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>

@@ -8,14 +8,18 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
+import CollaborativeHero from "@/components/collabHero";
+import InfoHero from "@/components/InfoHero";
 
 const HomePage: React.FC = () => {
   return (
     <>
       <Hero />
-      <Logos />
+   <InfoHero/>
+      <CollaborativeHero/>
       <Container>
         <Benefits />
+
 
         <Section
           id="pricing"
@@ -32,7 +36,7 @@ const HomePage: React.FC = () => {
         >
           <Testimonials />
         </Section>
-
+        <Logos />
         <FAQ />
 
         <Stats />
